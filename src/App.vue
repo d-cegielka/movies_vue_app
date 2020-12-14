@@ -1,28 +1,24 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <b-container>
+    <h1>Baza filmów</h1>
+    <SearchEngine/>
+    <MovieTable/>
+  </b-container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchEngine from './components/SearchEngine.vue'
+import MovieTable from "@/components/MovieTable";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SearchEngine,
+    MovieTable
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
