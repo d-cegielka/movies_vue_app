@@ -48,11 +48,13 @@
         placeholder="Imię i nazwisko">
       </b-form-input>
     </b-form-group>
-    <b-button variant="info col-sm-12" type="button">Szukaj</b-button>
+    <b-button id='searchButton' variant="info col-sm-12" type="button" @click="emitSearch">Szukaj</b-button>
   </b-form>
 </template>
 
 <script>
+import {EventBus} from "@/event-bus";
+
 export default {
   name: 'SearchEngine',
   data() {
@@ -65,7 +67,12 @@ export default {
       },
       show: true
     }
-  }
+  },
+  methods:{
+    emitSearch() {
+      EventBus.$emit('search-value',this.form)
+    }
+  },
 
 }
 </script>
