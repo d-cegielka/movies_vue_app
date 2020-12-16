@@ -15,18 +15,18 @@ import genres from '../assets/movies/genres.json'
 import movies from '../assets/movies/movies.json'
 import {_} from 'vue-underscore';
 
+let moviesList = _.first(movies, 100);
+
 export default {
 name: "MovieListByGenre",
-
   data(){
-
     return {
     items: genres
   };
   },
  methods:{
   getMoviesByGenre: function (genre) {
-    return _.filter(movies,function (movie) {
+    return _.filter(moviesList,function (movie) {
      return _.contains(movie.genres,genre)
     });
   }

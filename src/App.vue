@@ -4,6 +4,7 @@
     <SearchEngine/>
     <MovieTable/>
     <MovieListByGenre/>
+    <MovieListByCast/>
   </b-container>
 </template>
 
@@ -11,10 +12,12 @@
 import SearchEngine from './components/SearchEngine.vue'
 import MovieTable from "@/components/MovieTable";
 import MovieListByGenre from "@/components/MovieListByGenre";
+import MovieListByCast from "@/components/MovieListByCast";
 
 export default {
   name: 'App',
   components: {
+    MovieListByCast,
     MovieListByGenre,
     SearchEngine,
     MovieTable
